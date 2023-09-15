@@ -6,7 +6,6 @@ import { TareaDetailComponent } from './pages/tarea-detail/tarea-detail.componen
 const routes: Routes = [
   { path: 'tasks', component:TareasComponent },
   { path: 'new', component:TareaDetailComponent },
-  { path: 'edit', component:TareaDetailComponent },
 ];
 
 @NgModule({
