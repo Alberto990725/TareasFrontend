@@ -1,0 +1,19 @@
+<h1 class="mt-4">Mis tareas</h1>
+<div class="d-flex flex-row-reverse bd-highlight" style="margin-bottom: 20pt;margin-top: 20pt;">
+  <div class="col" style="align-items: end;">
+    <button type="button" class="btn btn-outline-primary" (click)="OnCreate()"><i class="fa-solid fa-plus"></i> Nuevo</button>
+    <button type="button" class="btn btn-outline-primary" (click)="OnEdit()" style="margin-left: 5pt;margin-right: 5pt;"><i class="fa-solid fa-pen-to-square"></i>Cambiar Estatus</button>
+    <button type="button" class="btn btn-outline-primary" (click)="OnDelete()"><i class="fa-solid fa-trash"></i> Eliminar</button>
+  </div>
+</div>
+<div class="row">
+  <ag-grid-angular
+      style="width: 100%; height: 350px;"
+      class="ag-theme-alpine"
+      (selectionChanged)="onRowSelected($event)"
+      (gridReady)="onGridReady($event)"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs">
+      [rowSelection]="'single'">
+    </ag-grid-angular>
+</div>
